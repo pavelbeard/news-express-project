@@ -5,11 +5,10 @@
   command = "pnpm --filter frontend... build"
 
 [functions]
-  external_node_modules = ["express", "serverless-http"]
+  external_node_modules = ["express"]
   node_bundler = "esbuild"
-
 [[redirects]]
-  from = "/api/*"
-  to = "/.netlify/functions/api/:splat"
-  status = 200
   force = true
+  from = "/api/*"
+  status = 200
+  to = "/.netlify/functions/api/:splat"
