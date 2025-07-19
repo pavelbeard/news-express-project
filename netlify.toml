@@ -2,7 +2,7 @@
   base = "./"
   publish = "apps/frontend/dist"
   functions = "apps/api"
-  command = "pnpm --filter frontend... build"
+  command = "pnpm --filter frontend... build && pnpm --filter api... build"
 
 [functions]
   external_node_modules = ["express"]
