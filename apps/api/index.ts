@@ -1,4 +1,5 @@
 import express from "express";
+import serverless from "serverless-http";
 import router from "./hello";
 
 const app = express();
@@ -16,4 +17,4 @@ app.listen(3000, () => {
   console.log("Server is running on http://localhost:3000");
 });
 
-export default app;
+export const handler = serverless(app);
