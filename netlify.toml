@@ -1,13 +1,15 @@
 [build]
-base = "./"
-publish = "apps/frontend/dist"
-functions = "netlify/functions"
+  base = "./"
+  publish = "apps/frontend/dist"
+  functions = "netlify/functions"
+  command = "pnpm --filter frontend... build"
 
 [functions]
-  external_node_modules = ["express"]
+  external_node_modules = ["express", "serverless-http"]
   node_bundler = "esbuild"
+
 [[redirects]]
-  force = true
   from = "/api/*"
-  status = 200
   to = "/.netlify/functions/api/:splat"
+  status = 200
+  force = true
