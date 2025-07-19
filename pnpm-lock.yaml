@@ -8,25 +8,28 @@ importers:
 
   .:
     dependencies:
+      express:
+        specifier: ^5.1.0
+        version: 5.1.0
       prettier:
         specifier: ^3.6.2
         version: 3.6.2
+      serverless-http:
+        specifier: ^3.2.0
+        version: 3.2.0
       tsc:
         specifier: ^2.0.4
         version: 2.0.4
       turbo:
         specifier: ^2.5.5
         version: 2.5.5
-
-  apps/api:
-    dependencies:
-      express:
-        specifier: ^5.1.0
-        version: 5.1.0
     devDependencies:
       '@types/express':
         specifier: ^5.0.3
         version: 5.0.3
+
+  apps/api:
+    devDependencies:
       '@types/node':
         specifier: ^24.0.15
         version: 24.0.15
@@ -1169,6 +1172,10 @@ packages:
   serve-static@2.2.0:
     resolution: {integrity: sha512-61g9pCh0Vnh7IutZjtLGGpTA355+OPn2TyDv/6ivP2h/AdAVX9azsoxmg2/M6nZeQZNYBEwIcsne1mJd9oQItQ==}
     engines: {node: '>= 18'}
+
+  serverless-http@3.2.0:
+    resolution: {integrity: sha512-QvSyZXljRLIGqwcJ4xsKJXwkZnAVkse1OajepxfjkBXV0BMvRS5R546Z4kCBI8IygDzkQY0foNPC/rnipaE9pQ==}
+    engines: {node: '>=12.0'}
 
   setprototypeof@1.2.0:
     resolution: {integrity: sha512-E5LDX7Wrp85Kil5bhZv46j8jOeboKq5JMmYM3gVGdGH8xFpPWXUMsNrlODCrkoxMEeNi/XZIwuRvY4XNwYMJpw==}
@@ -2413,6 +2420,8 @@ snapshots:
       send: 1.2.0
     transitivePeerDependencies:
       - supports-color
+
+  serverless-http@3.2.0: {}
 
   setprototypeof@1.2.0: {}
 

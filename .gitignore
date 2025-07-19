@@ -5,3 +5,5 @@ dist
 .DS_Store
 .env*
 .turbo
+# Local Netlify folder
+.netlify
