@@ -1,6 +1,6 @@
 import express from "express";
 import serverless from "serverless-http";
-import router from "./hello";
+import apiRouter from "./routes";
 
 const app = express();
 
@@ -11,7 +11,7 @@ app.get("/", (req, res) => {
   res.send("Hello World!");
 });
 
-app.use("/api/hello", router);
+app.use(apiRouter);
 
 app.listen(3000, () => {
   console.log("Server is running on http://localhost:3000");
